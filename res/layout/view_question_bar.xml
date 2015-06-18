@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2D3055"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/BarItem"
+            android:background="@drawable/selector_bar_item_back" />
+    </LinearLayout>
+
+    <!--
+         <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:layout_weight="2"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_scratch"
+            style="@style/BarItem"
+            android:background="@drawable/selector_bar_item_scratch" />
+    </LinearLayout>
+    -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_answercard"
+            style="@style/BarItem"
+            android:background="@drawable/selector_bar_item_answercard" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <CheckedTextView
+            android:id="@+id/tv_time"
+            style="@style/BarItem"
+            android:background="@drawable/selector_bar_item_time"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="#ff999999"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_share"
+            style="@style/BarItem"
+            android:background="@drawable/selector_bar_item_share" />
+    </LinearLayout>
+
+</LinearLayout>
