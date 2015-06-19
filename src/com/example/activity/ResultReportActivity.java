@@ -51,6 +51,9 @@ public class ResultReportActivity extends FragmentActivity  {
 		initData();
 		 mLocalBroadcastManager = LocalBroadcastManager.getInstance(this);
 		GridView gv = (GridView) findViewById(R.id.report_gv);
+		TextView tv_report_total_question = (TextView) findViewById(R.id.tv_report_total_question);
+		
+		tv_report_total_question.setText("/"+count+"道");
 		MyAdapter adapter = new MyAdapter(this);
 		gv.setAdapter(adapter);
 		gv.setOnItemClickListener(new OnItemClickListener() {
