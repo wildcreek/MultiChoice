@@ -7,6 +7,7 @@ import com.example.adapter.ItemAdapter;
 import com.example.bean.QuestionBean;
 import com.example.bean.QuestionOptionBean;
 import com.example.listmultichoise.R;
+import com.example.view.ConfirmDialog;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -100,16 +101,29 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.tv_back:
+		case R.id.tv_back://点击头部返回
 			
 			break;
-		case R.id.tv_answercard:
+		case R.id.tv_answercard://点击头部答题卡
+			
 			jumpToPage(questionlist.size());
-			break;
-		case R.id.tv_time:
 			
 			break;
-		case R.id.tv_share:
+		case R.id.tv_time://点击头部计时器
+			//TODO计时器停止计时
+			 final ConfirmDialog confirmDialog = new ConfirmDialog(this, "共4道题，还剩4道题未做");
+			 confirmDialog.show();
+			 confirmDialog.setClicklistener(new ConfirmDialog.ClickListenerInterface() {
+
+				@Override
+				public void doProceed() {
+					//TODO计时器继续计时
+					confirmDialog.dismiss();
+				}
+			 
+			 });
+			break;
+		case R.id.tv_share://点击头部分享
 			
 			break;			
 		default:

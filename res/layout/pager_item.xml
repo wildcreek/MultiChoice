@@ -89,7 +89,7 @@
             android:background="#F5F5F5"
              >
 
-            <com.example.listmultichoice.NoScrollListview
+            <com.example.view.NoScrollListview
                 android:id="@+id/lv_options"
                 style="?android:attr/listViewWhiteStyle"
                 android:divider="@null"
