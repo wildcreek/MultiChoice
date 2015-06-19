@@ -24,6 +24,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
 
 import com.example.activity.MainActivity;
+import com.example.activity.ResultReportActivity;
 import com.example.bean.QuestionBean;
 import com.example.listmultichoise.R;
 
@@ -44,6 +45,16 @@ public class ScantronItemFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.pager_item_scantron,
 				container, false);
 		GridView gv = (GridView) rootView.findViewById(R.id.gridview);
+		TextView tv_submit_result = (TextView) rootView.findViewById(R.id.tv_submit_result);
+		tv_submit_result.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getActivity(),ResultReportActivity.class);
+				startActivity(intent);
+				
+			}
+		});
 		MyAdapter adapter = new MyAdapter(getActivity());
 		gv.setAdapter(adapter);
 		gv.setOnItemClickListener(new OnItemClickListener() {
