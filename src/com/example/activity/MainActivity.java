@@ -1,6 +1,8 @@
 package com.example.activity;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.example.adapter.ItemAdapter;
@@ -10,6 +12,8 @@ import com.example.listmultichoise.R;
 import com.example.view.ConfirmDialog;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -47,6 +51,11 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	private ItemAdapter pagerAdapter;
 	View pager_item;
 	public static int currentIndex = 0;
+	private TextView tv_time;
+	private TextView tv_share;
+	private TextView tv_answercard;
+	private TextView tv_back;
+ 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,15 +64,16 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 
 		setContentView(R.layout.activity_main);
 		loadData();
+		
 
 		Log.e("测试数据", questionlist.get(0).toString());
 		Log.e("测试数据", questionlist.get(1).toString());
 		
-		TextView tv_back = (TextView) findViewById(R.id.tv_back);
-		TextView tv_answercard = (TextView) findViewById(R.id.tv_answercard);
-		TextView tv_time = (TextView) findViewById(R.id.tv_time);
-		TextView tv_share = (TextView) findViewById(R.id.tv_share);
-		
+		tv_back = (TextView) findViewById(R.id.tv_back);
+		tv_answercard = (TextView) findViewById(R.id.tv_answercard);
+		tv_time = (TextView) findViewById(R.id.tv_time);
+		tv_share = (TextView) findViewById(R.id.tv_share);
+		startCounter();
 		tv_back.setOnClickListener(this); 
 		tv_answercard.setOnClickListener(this); 
 		tv_time.setOnClickListener(this); 
@@ -111,6 +121,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			break;
 		case R.id.tv_time://点击头部计时器
 			//TODO计时器停止计时
+			stopCounter();
 			 final ConfirmDialog confirmDialog = new ConfirmDialog(this, "共4道题，还剩4道题未做");
 			 confirmDialog.show();
 			 confirmDialog.setClicklistener(new ConfirmDialog.ClickListenerInterface() {
@@ -119,6 +130,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 				public void doProceed() {
 					//TODO计时器继续计时
 					confirmDialog.dismiss();
+					startCounter();
 				}
 			 
 			 });
@@ -221,6 +233,70 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 				"001", options4);
 		questionlist.add(question);
 
+	}
+	//计时器任务
+	int time = 0;
+	int second = 0;
+	int minute = 0;
+	String timeStr  ="00:00";
+	int[] iTime = new int[]{0,0,0,0};
+	Handler handler = new Handler(){
+		public void handleMessage(android.os.Message msg) {
+			switch (msg.what) {
+			case 1:
+				time++;
+				second = time %60;
+				minute = time /60;
+				if(minute>99){
+					break;
+				}
+				//Log.e("秒数", ""+second);
+				//Log.e("分钟数", ""+minute);
+				if(second < 10 && minute < 10){
+					iTime[0]=0;
+					iTime[1]=minute;
+					iTime[2]=0;
+					iTime[3]=second;
+					
+				}else if(second >= 10 && minute < 10){
+					iTime[0]=0;
+					iTime[1]=minute;
+					iTime[2]=(second+"").charAt(0)-48;
+					iTime[3]=(second+"").charAt(1)-48;
+					
+				}else if(second < 10 && minute >= 10){
+					iTime[0]=(minute+"").charAt(0)-48;
+					iTime[1]=(minute+"").charAt(1)-48;
+					iTime[2]=0;
+					iTime[3]=second;
+					
+				}else if(second >= 10 && minute >= 10){
+					iTime[0]=(minute+"").charAt(0)-48;
+					iTime[1]=(minute+"").charAt(1)-48;
+					iTime[2]=(second+"").charAt(0)-48;
+					iTime[3]=(second+"").charAt(1)-48;
+					
+				}
+				tv_time.setText(""+iTime[0]+iTime[1]+":"+iTime[2]+iTime[3]);
+				handler.sendEmptyMessageDelayed(1, 1000);
+				break;
+
+			default:
+				break;
+			}
+			
+		};
+	};
+
+
+	// 开始计时
+	public void startCounter() {
+		handler.sendEmptyMessageDelayed(1, 1000);
+	}
+
+	// 暂停计时
+	public void stopCounter() {
+		handler.removeCallbacksAndMessages(null);
 	}
 
  

@@ -55,9 +55,11 @@
 
         <CheckedTextView
             android:id="@+id/tv_time"
-            style="@style/BarItem"
-            android:background="@drawable/selector_bar_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:gravity="center"
+            android:background="@drawable/selector_bar_item_time"
             android:text="00:00"
             android:textColor="#ff999999"
             android:textSize="14dp" />
