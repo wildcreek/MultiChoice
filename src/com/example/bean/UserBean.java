@@ -1,9 +1,9 @@
-package com.example.listmultichoise.bean;
+package com.example.bean;
 
 public class UserBean extends BaseBean {
 
 	public String uId;// 用户ID
-	public String uName;// 登录�?手机�?
+	public String uName;// 登录�?手机�?
 	public String uPwd; // 登录密码
 	public String uLogName; // 昵称
 	public String userCode;

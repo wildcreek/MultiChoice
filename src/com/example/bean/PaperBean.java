@@ -1,9 +1,9 @@
-package com.example.listmultichoise.bean;
+package com.example.bean;
 
 import java.util.List;
 
 /**
- * @Description:试卷实体�?
+ * @Description:试卷实体�?
  * @author：hzc
  */
 public class PaperBean extends BaseBean {
@@ -12,12 +12,12 @@ public class PaperBean extends BaseBean {
 	// 试卷ID：testPaperId
 	// 试卷类型：testPagerType (1- 真题 2- 模拟考试)
 	// 总题数：totalQuestionNumber
-	// 每个知识点的情况（真题试卷才有知识点相关信息�? knowledgePoints
+	// 每个知识点的情况（真题试卷才有知识点相关信息�? knowledgePoints
 
 	public String testPaperName;//试卷名称
 	public String testPaperId;// 试卷ID
 	public int testPagerType; // 试卷类型
-	public int totalQuestionNumber; // 总题�?
+	public int totalQuestionNumber; // 总题�?
 	public List<KnowledgePointBean> knowledgePoints;//每个知识点的情况
 
 	public PaperBean() {

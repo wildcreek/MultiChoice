@@ -1,14 +1,14 @@
-package com.example.listmultichoise.bean;
+package com.example.bean;
 
 
 /**
- * 做为�?��基类，有基本属�?�?br>
- * 例如 :{“result":�?�?"message":""}
+ * 做为�?��基类，有基本属�?�?br>
+ * 例如 :{“result":�?�?"message":""}
  */
 public class BaseBean {
 
 	/**
-	 * 对应{"result":"1", 1:请求成功, 0:请求失败�?
+	 * 对应{"result":"1", 1:请求成功, 0:请求失败�?
 	 */
 	public int result;//
 	public String message;

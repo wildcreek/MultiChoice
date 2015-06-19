@@ -1,11 +1,12 @@
-package com.example.listmultichoice;
+package com.example.activity;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.adapter.ItemAdapter;
+import com.example.bean.QuestionBean;
+import com.example.bean.QuestionOptionBean;
 import com.example.listmultichoise.R;
-import com.example.listmultichoise.bean.QuestionBean;
-import com.example.listmultichoise.bean.QuestionOptionBean;
 
 import android.os.Bundle;
 import android.app.Activity;

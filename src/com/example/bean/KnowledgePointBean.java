@@ -1,27 +1,27 @@
-package com.example.listmultichoise.bean;
+package com.example.bean;
 
 /**
- * @Description: 知识点的实体�?
+ * @Description: 知识点的实体�?
  * @author：hzc
  */
 public class KnowledgePointBean extends BaseBean {
 
-	// 每个知识点的情况（真题试卷才有知识点相关信息�? knowledgePoints
-	// 1�?知识点名称：knowledgePointName
-	// 2�?知识点ID：knowledgePointId
-	// 3�?是否答完：isFinishAnswer�?- 做完 �?- 未做完）
-	// 4�?题数：questionNumber
-	// 5�?�?��的一次答题的正确率：correctRateOfLastTime
-	// 6�?已答的题数：answerNumber
-	// 7�?答过的次数：answerTimes
+	// 每个知识点的情况（真题试卷才有知识点相关信息�? knowledgePoints
+	// 1�?知识点名称：knowledgePointName
+	// 2�?知识点ID：knowledgePointId
+	// 3�?是否答完：isFinishAnswer�?- 做完 �?- 未做完）
+	// 4�?题数：questionNumber
+	// 5�?�?��的一次答题的正确率：correctRateOfLastTime
+	// 6�?已答的题数：answerNumber
+	// 7�?答过的次数：answerTimes
 
-	private String knowledgePointName;// 知识点名�?
+	private String knowledgePointName;// 知识点名�?
 	private String knowledgePointId;// 知识点id
 	private int isFinishAnswer; // 是否答完
 	private int questionNumber; // 题数
-	private double correctRateOfLastTime;// �?��的一次答题的正确�?
-	private int answerNumber;// 已答的题�?
-	private int answerTimes;// 答过的次�?
+	private double correctRateOfLastTime;// �?��的一次答题的正确�?
+	private int answerNumber;// 已答的题�?
+	private int answerTimes;// 答过的次�?
 
 	public KnowledgePointBean() {
 		super();

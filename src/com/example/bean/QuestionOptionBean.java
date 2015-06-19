@@ -1,7 +1,7 @@
-package com.example.listmultichoise.bean;
+package com.example.bean;
 
 /**
- * @Description:问题的�?�?
+ * @Description:问题的�?�?
  * @author：hzc
  */
 public class QuestionOptionBean extends BaseBean {
