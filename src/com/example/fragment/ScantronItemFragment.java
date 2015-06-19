@@ -27,6 +27,7 @@ import com.example.activity.MainActivity;
 import com.example.activity.ResultReportActivity;
 import com.example.bean.QuestionBean;
 import com.example.listmultichoise.R;
+import com.example.view.NoScrollGridView;
 
 public class ScantronItemFragment extends Fragment {
 	LocalBroadcastManager mLocalBroadcastManager;
@@ -44,7 +45,7 @@ public class ScantronItemFragment extends Fragment {
 		 mLocalBroadcastManager = LocalBroadcastManager.getInstance(getActivity());
 		View rootView = inflater.inflate(R.layout.pager_item_scantron,
 				container, false);
-		GridView gv = (GridView) rootView.findViewById(R.id.gridview);
+		NoScrollGridView gv = (NoScrollGridView) rootView.findViewById(R.id.gridview);
 		TextView tv_submit_result = (TextView) rootView.findViewById(R.id.tv_submit_result);
 		tv_submit_result.setOnClickListener(new OnClickListener() {
 			

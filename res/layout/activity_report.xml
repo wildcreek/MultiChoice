@@ -47,6 +47,7 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:id="@+id/rl_result_panel"
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
                 android:background="#0099fb" >

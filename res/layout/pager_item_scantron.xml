@@ -54,10 +54,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <GridView
+            <com.example.view.NoScrollGridView
                 android:id="@+id/gridview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
                 android:gravity="center"
                 android:horizontalSpacing="10dp"
                 android:numColumns="5"
@@ -65,7 +66,7 @@
                 android:paddingRight="10dp"
                 android:stretchMode="columnWidth"
                 android:verticalSpacing="15dp" >
-            </GridView>
+            </com.example.view.NoScrollGridView>
 
         </LinearLayout>
 

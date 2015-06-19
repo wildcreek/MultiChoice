@@ -32,6 +32,7 @@ import android.widget.Button;
 import android.widget.CheckedTextView;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,10 +54,11 @@ public class ResultReportActivity extends FragmentActivity  {
 		GridView gv = (GridView) findViewById(R.id.report_gv);
 		TextView tv_report_total_question = (TextView) findViewById(R.id.tv_report_total_question);
 		TextView tv_report_exam_type = (TextView) findViewById(R.id.tv_report_exam_type);
+		RelativeLayout rl_result_panel = (RelativeLayout) findViewById(R.id.rl_result_panel);
 		//设置scrollview 自动置顶
-		tv_report_exam_type.setFocusable(true);
-		tv_report_exam_type.setFocusableInTouchMode(true);
-		tv_report_exam_type.requestFocus();
+		rl_result_panel.setFocusable(true);
+		rl_result_panel.setFocusableInTouchMode(true);
+		rl_result_panel.requestFocus();
 		
 		tv_report_total_question.setText("/"+count+"道");
 		MyAdapter adapter = new MyAdapter(this);
