@@ -12,7 +12,6 @@
         android:layout_weight="1"
         android:background="#F5F5F5"
         android:fillViewport="true"
-        android:paddingBottom="30dp"
         android:scrollbars="none" >
 
         <LinearLayout
@@ -128,6 +127,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="20dp"
+                android:paddingBottom="30dp"
                 android:stretchMode="columnWidth"
                 android:verticalSpacing="15dp" >
             </com.example.view.NoScrollGridView>
