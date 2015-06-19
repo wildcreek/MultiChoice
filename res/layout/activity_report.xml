@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_report_bar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#F5F5F5"
+        android:fillViewport="true"
+        android:paddingBottom="30dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#F5F5F5"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp" >
+
+                <TextView
+                    android:id="@+id/tv_report_exam_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="练习类型 专项智能练习 (言语理解与表达)"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_submit_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="交卷时间 2015.06.19 15:33"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="#0099fb" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="答对"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_difficulty"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_difficulty_value"
+                    android:paddingLeft="4dp"
+                    android:text="4.4"
+                    android:textColor="#0099fb" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="100sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginRight="10dp"
+                    android:text="道/4道"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#F5F5F5"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8dp"
+                    android:text="答题卡"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <com.example.view.NoScrollGridView
+                android:id="@+id/report_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="5"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="15dp" >
+            </com.example.view.NoScrollGridView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0099fb"
+        android:divider="?android:attr/listDivider"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:showDividers="middle" >
+
+        <TextView
+            android:id="@+id/tv_wrong_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="错题解析"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_all_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全部解析"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</LinearLayout>
