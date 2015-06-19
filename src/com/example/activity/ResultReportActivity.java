@@ -52,6 +52,11 @@ public class ResultReportActivity extends FragmentActivity  {
 		 mLocalBroadcastManager = LocalBroadcastManager.getInstance(this);
 		GridView gv = (GridView) findViewById(R.id.report_gv);
 		TextView tv_report_total_question = (TextView) findViewById(R.id.tv_report_total_question);
+		TextView tv_report_exam_type = (TextView) findViewById(R.id.tv_report_exam_type);
+		//设置scrollview 自动置顶
+		tv_report_exam_type.setFocusable(true);
+		tv_report_exam_type.setFocusableInTouchMode(true);
+		tv_report_exam_type.requestFocus();
 		
 		tv_report_total_question.setText("/"+count+"道");
 		MyAdapter adapter = new MyAdapter(this);
