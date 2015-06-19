@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_corners" >
+
+    <LinearLayout
+        android:id="@+id/container_info"
+        android:layout_width="match_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_dialog_bg_noborder"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_timer_dialog_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="休息一下"
+            android:textColor="#ff00cc66"
+            android:textSize="18.0dip" />
+
+        <TextView
+            android:id="@+id/tv_timer_dialog_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20.0dip"
+            android:gravity="center"
+            android:textColor="#ff666666"
+            android:textSize="14.0dip" />
+
+        <TextView
+            android:id="@+id/btn_timer_dialog_proceed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_dialog_common_btn"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="继续做题"
+            android:textColor="#ff3599ff"
+            android:textSize="16.0dip" />
+    </LinearLayout>
+
+</RelativeLayout>
