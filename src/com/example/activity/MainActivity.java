@@ -154,13 +154,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
              }  
 		}
 	};
-
-	protected void onDestroy() {
-		LocalBroadcastManager.getInstance(this).unregisterReceiver(
-				mMessageReceiver);
-		super.onDestroy();
-	}
-
+ 
 	public void jumpToNext() {
 		int position = vp.getCurrentItem();
 		vp.setCurrentItem(position + 1);
@@ -297,6 +291,12 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	// 暂停计时
 	public void stopCounter() {
 		handler.removeCallbacksAndMessages(null);
+	}
+	
+	protected void onDestroy() {
+		LocalBroadcastManager.getInstance(this).unregisterReceiver(
+				mMessageReceiver);
+		super.onDestroy();
 	}
 
  
