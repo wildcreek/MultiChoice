@@ -5,7 +5,7 @@ and automatically generate a scantron.
 
 ![image](https://github.com/wildcreek/MultiChoice/blob/master/demo.gif )   
 
-## Code Snippets 
+## Key Points 
  * **Mixed choice options:** `refer to ListView.CHOICE_MODE_SINGLE and ListView.CHOICE_MODE_MULTIPLE`
  * **ViewPager:** `Adapter inflates two kind of layout: question and scantron `
  * **Scantron:** `implemented by GridView  `
