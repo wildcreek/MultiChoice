@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ListMultiChoise</string>
+    <string name="app_name">ListMultiChoice</string>
     <string name="action_settings">多选</string>
     <string name="select_item">已选择:</string>
     <string name="action_select_all">全选</string>
