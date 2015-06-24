@@ -29,6 +29,12 @@ import com.example.bean.QuestionBean;
 import com.example.listmultichoise.R;
 import com.example.view.NoScrollGridView;
 
+/**
+ * @version 1.0
+ * @author hzc
+ * @date 2015-6-24
+ */
+
 public class ScantronItemFragment extends Fragment {
 	LocalBroadcastManager mLocalBroadcastManager;
 	public ScantronItemFragment() {

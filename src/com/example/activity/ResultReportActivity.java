@@ -36,6 +36,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * @version 1.0
+ * @author hzc
+ * @date 2015-6-24
+ */
+
 public class ResultReportActivity extends FragmentActivity  {
 	LocalBroadcastManager mLocalBroadcastManager;
 	int count = MainActivity.questionlist.size();

@@ -33,6 +33,12 @@ import com.example.bean.QuestionBean;
 import com.example.listmultichoise.R;
 import com.example.view.NoScrollListview;
 
+/**
+ * @version 1.0
+ * @author hzc
+ * @date 2015-6-24
+ */
+
 public class QuestionItemFragment extends Fragment {
 	QuestionBean questionBean;
 	int index ;

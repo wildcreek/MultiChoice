@@ -38,6 +38,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * @version 1.0
+ * @author hzc
+ * @date 2015-6-24
+ */
 public class MainActivity extends FragmentActivity implements OnClickListener {
 	List<View> list = new ArrayList<View>();
 	public static List<QuestionBean> questionlist = new ArrayList<QuestionBean>();
