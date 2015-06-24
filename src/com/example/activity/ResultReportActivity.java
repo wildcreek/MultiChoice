@@ -60,7 +60,7 @@ public class ResultReportActivity extends FragmentActivity  {
 		rl_result_panel.setFocusableInTouchMode(true);
 		rl_result_panel.requestFocus();
 		
-		tv_report_total_question.setText("/"+count+"道");
+		tv_report_total_question.setText("道/"+count+"道");
 		MyAdapter adapter = new MyAdapter(this);
 		gv.setAdapter(adapter);
 		gv.setOnItemClickListener(new OnItemClickListener() {

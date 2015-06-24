@@ -123,6 +123,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			//TODO计时器停止计时
 			stopCounter();
 			 final ConfirmDialog confirmDialog = new ConfirmDialog(this, "共4道题，还剩4道题未做");
+			 confirmDialog.setCancelable(false);
 			 confirmDialog.show();
 			 confirmDialog.setClicklistener(new ConfirmDialog.ClickListenerInterface() {
 
